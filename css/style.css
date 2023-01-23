@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+* {
+   margin: 0;
+   box-sizing: border-box;
+}
+
+ul, ol {
+   padding: 0;
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+body {
+   background: #F7F7F7;
+   overflow-x: hidden;
+   padding-top: 80px;
+}
+
+h2 {
+   font-family: 'Delius Unicase', cursive;
+   margin: 0 auto;
+   text-align: center;
+   padding-bottom: 80px;
+}
+
+p {
+   font-family: 'Roboto', sans-serif;
+}
+
+.gallery {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   grid-template-areas:
+                  "pic1 pic2 pic2"
+                  "pic3 pic3 pic4"
+                  "pic5 pic6 pic6";
+   max-width: 1170px;
+   width: 100%;
+   margin: 0 auto;
+   grid-gap: 30px;
+}
+
+.gallery img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: top;
+   border-radius: 20px;
+}
+
+.gallery {
+   margin-bottom: 100px;
+}
+
+.gallery__item {
+   position: relative;
+   cursor: pointer;
+}
+
+.icons {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   position: absolute;
+   top: 20px;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   padding: 0 20px;
+   z-index: 1;
+   transition: .3s all;
+}
+
+button {
+   width: 40px;
+   height: 40px;
+   background: #E0E0E0;
+   border-radius: 8px;
+   border: none;
+   opacity: .5;
+}
+.icons button:hover {
+   opacity: 1;
+   cursor: pointer;
+   background: #E0E0E0;
+   z-index: 2;
+}
+
+.gallery__item::after {
+   position: absolute;
+   content: '';
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(0, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+   border-radius: 20px;
+   transition: .3s all;
+}
+
+.gallery__details {
+   display: flex;
+   justify-content: space-between;
+   color: #fff;
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 1;
+   padding: 20px;
+   opacity: 1;
+   transition: .3s all;
+}
+
+.gallery__item:hover::after {
+   opacity: 0;
+}
+
+
+.gallery__item--pic1 {
+   grid-area: pic1;
+}
+
+.gallery__item--pic2 {
+   grid-area: pic2;
+}
+
+.gallery__item--pic3 {
+   grid-area: pic3;
+}
+
+.gallery__item--pic4 {
+   grid-area: pic4;
+}
+
+.gallery__item--pic5 {
+   grid-area: pic5;
+}
+
+.gallery__item--pic6 {
+   grid-area: pic6;
+}
+
+.gallery-2 {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: 370px 770px 370px;
+   grid-template-areas:
+                  "pic7 pic8 pic8"
+                  "pic9 pic9 pic10"
+                  "pic11 pic11 pic12";
+   max-width: 1170px;
+   width: 100%;
+   margin: 0 auto;
+   grid-gap: 30px;
+}
+
+.gallery-2 {
+   margin-bottom: 100px;
+}
+
+.gallery-2 img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: top;
+   border-radius: 20px;
+}
+
+.gallery__item--pic7 {
+   grid-area: pic7;
+}
+
+.gallery__item--pic8 {
+   grid-area: pic8;
+}
+
+.gallery__item--pic9 {
+   grid-area: pic9;
+}
+
+.gallery__item--pic10 {
+   grid-area: pic10;
+}
+
+.gallery__item--pic11 {
+   grid-area: pic11;
+}
+
+.gallery__item--pic12 {
+   grid-area: pic12;
+}
+
+.gallery-3 {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(5, 1fr);
+   grid-template-areas:
+                  "pic13 pic15 pic16"
+                  "pic14 pic15 pic17"
+                  "pic19 pic18 pic17"
+                  "pic19 pic20 pic20"
+                  "pic21 pic21 pic22";
+   max-width: 1170px;
+   width: 100%;
+   margin: 0 auto;
+   grid-gap: 30px;
+}
+
+.gallery-3 {
+   margin-bottom: 100px;
+}
+
+.gallery-3 img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: top;
+   border-radius: 20px;
+}
+
+.gallery__item--pic13 {
+   grid-area: pic13;
+}
+
+.gallery__item--pic14 {
+   grid-area: pic14;
+}
+
+.gallery__item--pic15 {
+   grid-area: pic15;
+}
+
+.gallery__item--pic16 {
+   grid-area: pic16;
+}
+
+.gallery__item--pic17 {
+   grid-area: pic17;
+}
+
+.gallery__item--pic18 {
+   grid-area: pic18;
+}
+
+.gallery__item--pic19 {
+   grid-area: pic19;
+}
+
+.gallery__item--pic20 {
+   grid-area: pic20;
+}
+
+.gallery__item--pic21 {
+   grid-area: pic21;
+}
+
+.gallery__item--pic22 {
+   grid-area: pic22;
+}
